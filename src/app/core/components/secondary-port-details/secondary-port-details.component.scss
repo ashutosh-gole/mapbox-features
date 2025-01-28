@@ -1,0 +1,183 @@
+.secondary-port-details-dialog {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-height: 100vh;
+
+    mat-tab-group {
+        margin-top: 16px;
+
+        mat-tab {
+            padding: 16px;
+        }
+    }
+
+    h2,
+    h3 {
+        color: #333;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+    .overview-tab {
+        padding: 20px;
+
+        /* Gallery container */
+        .media-gallery {
+            margin-top: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            /* Responsive grid */
+            gap: 16px;
+            /* Spacing between items */
+        }
+
+        /* Individual media item styling */
+        .media-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .media-item:hover {
+            transform: scale(1.05);
+            /* Hover effect */
+        }
+
+        /* Styling for images */
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the image covers the space without distortion */
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            opacity: 0.8;
+            /* Slight opacity change on hover */
+        }
+
+        /* Styling for videos */
+        .gallery-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Ensures the video covers the space */
+            border-radius: 8px;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-video:hover {
+            opacity: 0.8;
+            /* Slight opacity change on hover */
+        }
+    }
+
+    .traffic-chart-container {
+        padding: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        canvas {
+            width: 90% !important;
+            height: 400px !important;
+        }
+    }
+
+    .vessel-chart-container {
+        padding: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        canvas {
+            width: 60% !important;
+            height: 400px !important;
+        }
+    }
+
+    .current-weather {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        img {
+            width: 100px; // Adjusted for smaller size
+            height: 100px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .weather-tab {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .header {
+            text-align: center;
+
+            .port-name {
+                font-size: 32px;
+                font-weight: 500;
+                padding: 12px;
+            }
+        }
+
+        .forecast-details {
+            margin: 0px 32px;
+
+            .forecast-day {
+                display: flex;
+                align-items: center;
+                gap: 80px;
+
+                .day {
+                    min-width: 72px;
+                }
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .condition {
+                    min-width: 72px;
+                    margin: 0px 0px 0px 30px;
+                }
+
+                .temperature-range {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+
+                    .min-temp,
+                    .max-temp {
+                        display: flex;
+                        align-items: center;
+                        font-size: 14px;
+                        gap: 5px;
+
+                        .icon {
+                            font-size: 16px;
+                            color: #007bff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
