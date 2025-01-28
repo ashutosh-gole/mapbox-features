@@ -77,7 +77,7 @@ export class PortMapComponent implements OnInit, AfterViewInit {
       data: geojson,
       cluster: true,
       clusterMaxZoom: 14,
-      clusterRadius: 50
+      clusterRadius: 100
     });
 
     this.map.addLayer({
@@ -89,7 +89,7 @@ export class PortMapComponent implements OnInit, AfterViewInit {
         'circle-color': [
           'step',
           ['get', 'point_count'],
-          '#51bbd6',
+          '#FFD000',
           100,
           '#f1f075',
           750,
